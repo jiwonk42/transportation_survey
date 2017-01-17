@@ -1,16 +1,17 @@
 $(document).ready(function(){
-  $("form#transportation_survey").submit(function(event){
+  $("form#future-survey").submit(function(event){
     event.preventDefault();
-    $("#work-responses").show();
-    $("input:checkbox[name=work-transportation]:checked").each(function(){
-      var workTransportationMode = $(this).val();
-      $('#work-responses').append(workTransportationMode + "<br>");
+    $("#zodiac-response").show();
+    $("input:checkbox[name=zodiac]:checked").each(function(){
+      var zodiac = $(this).val();
+      $('#zodiac-response').append(zodiac + "<br>");
     });
-    $("#fun-responses").show();
-    $("input:checkbox[name=fun-transportation]:checked").each(function(){
-      var funTransportationMode = $(this).val();
-      $('#fun-responses').append(funTransportationMode + "<br>");
+
+    $("#globe-response").show();
+    $("input:checkbox[name=globe]:checked").each(function(){
+      var globe = $(this).val();
+      $('#globe-response').append(globe + "<br>");
     });
-    $('#transportation_survey').hide();
+    $('#future-survey').hide();
   });
 });
